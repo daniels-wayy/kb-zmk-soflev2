@@ -1,12 +1,13 @@
-identifier: eyelash_corne
-name: Eyelash Corne
-url: https://github.com/a741725193/zmk-new_corne
+identifier: eyelash_sofle
+name: Eyelash Sofle
+url: https://github.com/a741725193/zmk-sofle
 type: mcu
 arch: arm
 toolchain:
   - zephyr
   - gnuarmemb
   - xtools
+ram: 40
 supported:
   - adc
   - usb_device
@@ -15,4 +16,5 @@ supported:
   - pwm
   - watchdog
   - gpio
+  - i2c
   - spi
