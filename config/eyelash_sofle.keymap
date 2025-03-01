@@ -49,18 +49,30 @@
     behaviors {
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        command_backspace {
+            bindings = <&kp LG(BACKSPACE)>;
+            key-positions = <60 35>;
+        };
+
+        option_backspace {
+            bindings = <&kp LA(BACKSPACE)>;
+            key-positions = <60 34>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         lay_0 {
             bindings = <
-&kp ESC     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp UP_ARROW     &kp NUMBER_6          &kp N7         &kp N8     &kp N9   &kp N0    &trans
-&kp TAB     &kp Q         &kp W         &kp E         &kp R         &kp T        &kp DOWN_ARROW   &kp Y                 &kp U          &kp I      &kp O    &kp P     &trans
-&kp CAPS    &kp A         &kp S         &kp D         &kp F         &kp G        &kp LEFT_ARROW   &kp H                 &kp J          &kp K      &kp L    &kp SEMI  &kp APOS
-&kp LSHFT   &kp Z         &kp X         &kp C         &kp V         &kp B        &kp RIGHT_ARROW  &kp N                 &kp M          &kp COMMA  &kp DOT  &kp FSLH  &trans
-&kp C_MUTE  &kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI  &mo 1         &kp SPACE    &kp ENTER        &mt LEFT_SHIFT ENTER  &kp BACKSPACE  &mo 2      &trans   &mo 3
+&kp ESC     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5       &kp UP_ARROW     &kp NUMBER_6  &kp N7         &kp N8     &kp N9   &kp N0    &trans
+&kp TAB     &kp Q         &kp W         &kp E         &kp R         &kp T        &kp DOWN_ARROW   &kp Y         &kp U          &kp I      &kp O    &kp P     &trans
+&kp CAPS    &kp A         &kp S         &kp D         &kp F         &kp G        &kp LEFT_ARROW   &kp H         &kp J          &kp K      &kp L    &kp SEMI  &kp APOS
+&kp LSHFT   &kp Z         &kp X         &kp C         &kp V         &kp B        &kp RIGHT_ARROW  &kp N         &kp M          &kp COMMA  &kp DOT  &kp FSLH  &trans
+&kp C_MUTE  &kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI  &mo 1         &kp SPACE    &kp ENTER        &kp ENTER     &kp BACKSPACE  &mo 2      &trans   &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOL_DN>;
@@ -69,11 +81,11 @@
 
         lay_1 {
             bindings = <
-&trans      &kp F1           &kp F2        &kp F3        &kp F4        &kp F5         &mmv MOVE_UP     &kp F6         &kp F7             &kp F8          &kp F9                &kp F10                &kp F11
-&trans      &kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT    &mmv MOVE_DOWN   &kp CARET      &kp AMPS           &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
-&trans      &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &mmv MOVE_LEFT   &kp LESS_THAN  &kp GREATER_THAN   &kp EQUAL       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOUBLE_QUOTES
-&kp LG(Z)   &kp NUMBER_6     &kp NUMBER_7  &kp N8        &kp N9        &kp N0         &mmv MOVE_RIGHT  &kp MINUS      &kp PLUS           &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE
-&kp C_MUTE  &trans           &trans        &trans        &trans        &kp SPACE      &mkp LCLK        &kp SPACE      &kp LA(BACKSPACE)  &kp COLON       &kp BACKSLASH         &trans
+&trans      &kp F1           &kp F2        &kp F3        &kp F4        &kp F5         &mmv MOVE_UP     &kp F6         &kp F7            &kp F8          &kp F9                &kp F10                &kp F11
+&trans      &kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT    &mmv MOVE_DOWN   &kp CARET      &kp AMPS          &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+&trans      &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &mmv MOVE_LEFT   &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOUBLE_QUOTES
+&kp LG(Z)   &kp NUMBER_6     &kp NUMBER_7  &kp N8        &kp N9        &kp N0         &mmv MOVE_RIGHT  &kp MINUS      &kp PLUS          &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE
+&kp C_MUTE  &trans           &trans        &trans        &trans        &kp SPACE      &mkp LCLK        &kp SPACE      &trans            &kp COLON       &kp BACKSLASH         &trans
             >;
 
             display-name = "Layer 1";
