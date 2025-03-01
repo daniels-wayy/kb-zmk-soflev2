@@ -49,49 +49,7 @@
     behaviors {
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        curly_left_bracket {
-            bindings = <&kp LEFT_BRACE>;
-            key-positions = <17 16>;
-        };
-
-        curly_right_bracket {
-            bindings = <&kp RIGHT_BRACE>;
-            key-positions = <21 22>;
-        };
-
-        round_left_bracket {
-            bindings = <&kp LEFT_PARENTHESIS>;
-            key-positions = <30 29>;
-        };
-
-        round_right_bracket {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <34 35>;
-        };
-
-        square_left_bracket {
-            bindings = <&kp LEFT_BRACKET>;
-            key-positions = <42 43>;
-        };
-
-        square_right_bracket {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <47 48>;
-        };
-
-        angle_left_bracket {
-            bindings = <&kp LESS_THAN>;
-            key-positions = <55 54>;
-        };
-
-        angle_right_bracket {
-            bindings = <&kp GREATER_THAN>;
-            key-positions = <61 62>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -111,11 +69,11 @@
 
         lay_1 {
             bindings = <
-&trans      &kp F1           &kp F2        &kp F3        &kp F4        &kp F5         &mmv MOVE_UP     &kp F6         &kp F7            &kp F8          &kp F9                &kp F10                &kp F11
-&trans      &kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT    &mmv MOVE_DOWN   &kp CARET      &kp AMPS          &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
-&trans      &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &mmv MOVE_LEFT   &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOUBLE_QUOTES
-&trans      &kp NUMBER_6     &kp NUMBER_7  &kp N8        &kp N9        &kp N0         &mmv MOVE_RIGHT  &kp MINUS      &kp PLUS          &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE
-&kp C_MUTE  &trans           &trans        &trans        &trans        &trans         &mkp LCLK        &trans         &trans            &kp COLON       &trans                &trans
+&trans      &kp F1           &kp F2        &kp F3        &kp F4        &kp F5         &mmv MOVE_UP     &kp F6         &kp F7             &kp F8          &kp F9                &kp F10                &kp F11
+&trans      &kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT    &mmv MOVE_DOWN   &kp CARET      &kp AMPS           &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
+&trans      &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &mmv MOVE_LEFT   &kp LESS_THAN  &kp GREATER_THAN   &kp EQUAL       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOUBLE_QUOTES
+&trans      &kp NUMBER_6     &kp NUMBER_7  &kp N8        &kp N9        &kp N0         &mmv MOVE_RIGHT  &kp MINUS      &kp PLUS           &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE
+&kp C_MUTE  &trans           &trans        &trans        &trans        &kp SPACE      &mkp LCLK        &kp SPACE      &kp LA(BACKSPACE)  &kp COLON       &kp BACKSLASH         &trans
             >;
 
             display-name = "Layer 1";
@@ -124,11 +82,11 @@
 
         lay_2 {
             bindings = <
-&trans  &trans  &trans     &trans      &trans       &trans    &mmv MOVE_UP     &trans  &trans    &trans          &trans     &trans      &trans
-&trans  &trans  &trans     &trans      &trans       &trans    &mmv MOVE_DOWN   &trans  &trans    &kp UP_ARROW    &trans     &kp DELETE  &trans
-&trans  &trans  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans    &mmv MOVE_LEFT   &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans      &trans
-&trans  &trans  &trans     &trans      &trans       &trans    &mmv MOVE_RIGHT  &trans  &trans    &trans          &trans     &trans      &trans
-&trans  &trans  &trans     &trans      &trans       &trans    &mkp LCLK        &trans  &trans    &trans          &trans     &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &mmv MOVE_UP     &trans  &trans    &trans          &trans     &trans      &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &mmv MOVE_DOWN   &trans  &trans    &kp UP_ARROW    &trans     &kp DELETE  &trans
+&trans  &trans  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans    &mmv MOVE_LEFT   &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans      &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &mmv MOVE_RIGHT  &trans  &trans    &trans          &trans     &trans      &trans
+&trans  &trans  &trans     &trans     &trans     &trans    &mkp LCLK        &trans  &trans    &trans          &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
