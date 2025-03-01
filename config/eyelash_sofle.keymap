@@ -85,7 +85,7 @@
 &trans      &kp EXCLAMATION  &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT    &mmv MOVE_DOWN   &kp CARET      &kp AMPS          &kp ASTERISK    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp PIPE
 &trans      &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5         &mmv MOVE_LEFT   &kp LESS_THAN  &kp GREATER_THAN  &kp EQUAL       &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp DOUBLE_QUOTES
 &trans      &kp NUMBER_6     &kp NUMBER_7  &kp N8        &kp N9        &kp N0         &mmv MOVE_RIGHT  &kp MINUS      &kp PLUS          &kp UNDERSCORE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp SINGLE_QUOTE
-&kp C_MUTE  &trans           &trans        &kp LG(Z)     &trans        &kp SPACE      &mkp LCLK        &kp SPACE      &sk LEFT_SHIFT    &kp COLON       &kp BACKSLASH         &trans
+&kp C_MUTE  &trans           &trans        &kp LG(Z)     &trans        &kp SPACE      &mkp LCLK        &kp SPACE      &kp BACKSPACE     &kp COLON       &kp BACKSLASH         &trans
             >;
 
             display-name = "Layer 1";
@@ -94,11 +94,11 @@
 
         lay_2 {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans    &mmv MOVE_UP     &trans  &trans    &trans          &trans     &trans      &trans
-&trans  &trans  &trans     &trans     &trans     &trans    &mmv MOVE_DOWN   &trans  &trans    &kp UP_ARROW    &trans     &kp DELETE  &trans
-&trans  &trans  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans    &mmv MOVE_LEFT   &trans  &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans      &trans
-&trans  &trans  &trans     &trans     &trans     &trans    &mmv MOVE_RIGHT  &trans  &trans    &trans          &trans     &trans      &trans
-&trans  &trans  &trans     &trans     &trans     &trans    &mkp LCLK        &trans  &trans    &trans          &trans     &trans
+&trans  &trans  &trans     &trans     &trans     &trans       &mmv MOVE_UP     &trans     &trans         &trans          &trans     &trans      &trans
+&trans  &trans  &trans     &trans     &trans     &trans       &mmv MOVE_DOWN   &trans     &trans         &kp UP_ARROW    &trans     &kp DELETE  &trans
+&trans  &trans  &kp LG(X)  &kp LG(C)  &kp LG(V)  &trans       &mmv MOVE_LEFT   &trans     &kp LEFT       &kp DOWN_ARROW  &kp RIGHT  &trans      &trans
+&trans  &trans  &trans     &trans     &trans     &trans       &mmv MOVE_RIGHT  &trans     &trans         &trans          &trans     &trans      &trans
+&trans  &trans  &trans     &trans     &trans     &kp SPACE    &mkp LCLK        &kp SPACE  &kp BACKSPACE  &trans          &trans     &trans
             >;
 
             sensor-bindings = <&scroll_encoder>;
